@@ -74,11 +74,17 @@
   </script>
 
 <script>
-  window.addEventListener('DOMContentLoaded', () => {
-    const header = document.querySelector('.top-bar');
-    if (header) {
-      const height = header.offsetHeight;
-      document.body.style.paddingTop = `${height}px`;
+  window.addEventListener("DOMContentLoaded", () => {
+    if (window.innerWidth <= 768) {
+      setTimeout(() => {
+        const hero = document.querySelector(".hero");
+        if (hero) {
+          window.scrollTo({
+            top: hero.offsetHeight,
+            behavior: "smooth"
+          });
+        }
+      }, 2800);
     }
   });
 </script>
