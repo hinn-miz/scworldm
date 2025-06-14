@@ -67,5 +67,16 @@
       .then(res => res.text())
       .then(data => document.getElementById('footer-placeholder').innerHTML = data);
   </script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const header = document.querySelector('.top-bar');
+    if (header) {
+      const height = header.offsetHeight;
+      document.body.style.paddingTop = `${height}px`;
+    }
+  });
+</script>
+
 </body>
 </html>
