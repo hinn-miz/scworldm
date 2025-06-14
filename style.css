@@ -122,11 +122,15 @@ body {
   padding: 0;
 }
 
-body {
+body 
+{
   font-family: 'Noto Sans KR', sans-serif;
   background: #fff;
   color: #333;
   padding-top: var(--header-height);
+}
+body {
+  margin-top: 120px; /* ← 직접 넣는다. */
 }
 
 
