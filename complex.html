@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>단지 안내 - 순천 월드메르디앙</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .placeholder-container {
+      padding-top: 120px;
+      min-height: 60vh;
+      text-align: center;
+      background-color: #f9f9f9;
+      color: #002B45;
+      animation: fadeIn 1.2s ease;
+    }
+
+    .placeholder-container h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .placeholder-container p {
+      font-size: 1.1rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .placeholder-container {
+        padding-top: 100px;
+      }
+
+      .placeholder-container h2 {
+        font-size: 1.7rem;
+      }
+
+      .placeholder-container p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <main class="placeholder-container">
+    <h2>단지 안내 페이지 준비중</h2>
+    <p>빠른 시일 내에<br><strong>동 배치, 커뮤니티 시설, 조경 구성</strong> 등의 정보를 제공할 예정입니다.<br>
+    관심고객 등록하고 빠르게 소식을 받아보세요.</p>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+</body>
+</html>
