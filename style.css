@@ -259,6 +259,32 @@ body {
 }
 @media (max-width: 768px) {
 
+/* 모달 전체 배경 */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 모달이 활성화됐을 때 */
+.modal.active {
+  display: flex;
+}
+
+/* 모달 콘텐츠 박스 */
+.modal-content {
+  background: white;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 90%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
 
 
 
