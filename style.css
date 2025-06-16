@@ -259,6 +259,16 @@ body {
 }
 @media (max-width: 768px) {
 
+
+
+}
+
+
+@media (max-width: 768px) {
+
+
+}
+
 /* 모달 전체 배경 */
 .modal {
   display: none;
@@ -271,27 +281,40 @@ body {
   justify-content: center;
 }
 
-/* 모달이 활성화됐을 때 */
-.modal.active {
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
   display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
 }
 
-/* 모달 콘텐츠 박스 */
 .modal-content {
-  background: white;
-  padding: 2rem 3rem;
-  border-radius: 12px;
+  background-color: #fff;
+  font-family: "Noto Sans KR", sans-serif;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
   text-align: center;
-  max-width: 90%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 80%;
 }
 
-
-
+.modal-content p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
 }
 
-
-@media (max-width: 768px) {
-
-
+#modalCloseBtn {
+  background-color: #002B45;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
 }
